@@ -2,6 +2,9 @@ import requests
 import json
 import config
 
+# This function creates a new project in the ATM Contributing Experts team
+# using the 360in180 video template
+
 
 def create_gg_video(client, number, total):
     data1 = """

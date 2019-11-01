@@ -2,6 +2,8 @@ import requests
 import json
 import config
 
+# This function is not currently used.
+
 
 def get_url(proj_gid):
     try:

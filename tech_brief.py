@@ -2,6 +2,9 @@ import requests
 import json
 import config
 
+# This function creates a new project in the ATM Contributing Experts team
+# using the Tech Brief template
+
 
 def create_tech_brief(client, number, total):
     data1 = """

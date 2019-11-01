@@ -1,7 +1,7 @@
 import requests
 import config
 
-# This function builds a Tech Brief
+# This function builds a Tech Brief tracker task
 
 
 def build_tb_task(project, client, number, link, pid):
@@ -53,7 +53,7 @@ def build_tb_task(project, client, number, link, pid):
     except requests.exceptions.RequestException:
         print('HTTP Request failed')
 
-# This function builds a Gorilla Guide video
+# This function builds a Gorilla Guide video tracker task
 
 
 def build_gg_video_task(project, client, number, link, pid):
@@ -103,6 +103,8 @@ def build_gg_video_task(project, client, number, link, pid):
     except requests.exceptions.RequestException:
         print('HTTP Request failed')
 
+# This function builds a Gorilla Guide Express tracker task
+
 
 def build_gge_task(project, client, number, pid):
     data1 = """
@@ -149,6 +151,8 @@ def build_gge_task(project, client, number, pid):
             content=response.content))
     except requests.exceptions.RequestException:
         print('HTTP Request failed')
+
+# This function builds a Gorilla Guide tracker task
 
 
 def build_gg_task(project, client, pid):
