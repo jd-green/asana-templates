@@ -46,10 +46,10 @@ def build_tb_task(project, client, number, link, pid):
             },
             data=theData.replace("tmp", client)
             )
-        print('Response HTTP Status Code: {status_code}'.format(
-            status_code=response.status_code))
-        print('Response HTTP Response Body: {content}'.format(
-            content=response.content))
+        # print('Response HTTP Status Code: {status_code}'.format(
+        #     status_code=response.status_code))
+        # print('Response HTTP Response Body: {content}'.format(
+        #     content=response.content))
     except requests.exceptions.RequestException:
         print('HTTP Request failed')
 
@@ -96,10 +96,10 @@ def build_gg_video_task(project, client, number, link, pid):
             },
             data=theData.replace("tmp", client)
             )
-        print('Response HTTP Status Code: {status_code}'.format(
-            status_code=response.status_code))
-        print('Response HTTP Response Body: {content}'.format(
-            content=response.content))
+        # print('Response HTTP Status Code: {status_code}'.format(
+        #     status_code=response.status_code))
+        # print('Response HTTP Response Body: {content}'.format(
+        #     content=response.content))
     except requests.exceptions.RequestException:
         print('HTTP Request failed')
 
@@ -145,10 +145,10 @@ def build_gge_task(project, client, number, pid):
             },
             data=theData.replace("tmp", client)
             )
-        print('Response HTTP Status Code: {status_code}'.format(
-            status_code=response.status_code))
-        print('Response HTTP Response Body: {content}'.format(
-            content=response.content))
+        # print('Response HTTP Status Code: {status_code}'.format(
+        #     status_code=response.status_code))
+        # print('Response HTTP Response Body: {content}'.format(
+        #     content=response.content))
     except requests.exceptions.RequestException:
         print('HTTP Request failed')
 
@@ -193,10 +193,10 @@ def build_gg_task(project, client, pid):
             },
             data=theData.replace("tmp", client)
             )
-        print('Response HTTP Status Code: {status_code}'.format(
-            status_code=response.status_code))
-        print('Response HTTP Response Body: {content}'.format(
-            content=response.content))
+        # print('Response HTTP Status Code: {status_code}'.format(
+        #     status_code=response.status_code))
+        # print('Response HTTP Response Body: {content}'.format(
+        #     content=response.content))
     except requests.exceptions.RequestException:
         print('HTTP Request failed')
 
@@ -245,9 +245,9 @@ def build_article_task(project, client, number, link, pid):
             },
             data=theData.replace("tmp", client)
             )
-        print('Response HTTP Status Code: {status_code}'.format(
-            status_code=response.status_code))
-        print('Response HTTP Response Body: {content}'.format(
-            content=response.content))
+        # print('Response HTTP Status Code: {status_code}'.format(
+        #     status_code=response.status_code))
+        # print('Response HTTP Response Body: {content}'.format(
+        #     content=response.content))
     except requests.exceptions.RequestException:
         print('HTTP Request failed')

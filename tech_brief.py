@@ -36,10 +36,10 @@ def create_tech_brief(client, number, total):
             },
             data=theData.replace('tmp', client)
             )
-        print('Response HTTP Status Code: {status_code}'.format(
-            status_code=response.status_code))
-        print('Response HTTP Response Body: {content}'.format(
-            content=response.content))
+        # print('Response HTTP Status Code: {status_code}'.format(
+        #     status_code=response.status_code))
+        # print('Response HTTP Response Body: {content}'.format(
+        #     content=response.content))
         proj = json.loads(response.content)
         return(proj["data"]["new_project"]["gid"])
     except requests.exceptions.RequestException:
