@@ -7,7 +7,7 @@ proj_id = input("Project ID: ")
 gid = input("Asana Project GID: ")
 
 # Create 8 Tech Brief Projects
-for num in range(6):
+for num in range(8):
     id = tech_brief.create_tech_brief(client_name, str(num+1), "8")
     print("Tech Brief Created!")
     print("Asana GID = "+id)
@@ -17,7 +17,7 @@ for num in range(6):
     print("Tech Brief Tracking Task Created!")
 
 # Create 8 Video Projects
-for num in range(6):
+for num in range(8):
     id = gg_video.create_gg_video(client_name, str(num+1), "8")
     print("Video Created!")
     print("Asana GID = "+id)
@@ -31,3 +31,7 @@ for num in range(2):
     build_task.build_gge_task(gid, client_name, str(num+1),
                               proj_id)
     print("GGE Tracking Task Created!")
+
+# Create a Gorilla Guide tracker tasks
+build_task.build_gg_task(gid, client_name, proj_id)
+print("GG Tracking Task Created!")
