@@ -18,15 +18,15 @@ gid = input("Asana Project GID: ")
 #     print("Article Tracking Task Created!")
 
 
-# Create 1 Tech Brief Projects
-for num in range(1):
-    id = tech_brief.create_tech_brief(client_name, str(num+1), "1")
-    print("Tech Brief Created!")
-    print("Asana GID = "+id)
-    url = "https://app.asana.com/0/"+id
-    build_task.build_tb_task(
-        gid, client_name, str(num+1), url, proj_id)
-    print("Tech Brief Tracking Task Created!")
+# # Create 1 Tech Brief Projects
+# for num in range(1):
+#     id = tech_brief.create_tech_brief(client_name, str(num+1), "1")
+#     print("Tech Brief Created!")
+#     print("Asana GID = "+id)
+#     url = "https://app.asana.com/0/"+id
+#     build_task.build_tb_task(
+#         gid, client_name, str(num+1), url, proj_id)
+#     print("Tech Brief Tracking Task Created!")
 
 # Create 1 Webinar Wrap-Up Paper Projects
 for num in range(1):
