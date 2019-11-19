@@ -2,14 +2,14 @@ import requests
 import json
 import config
 
-# This function creates a new project in the ATM Contributing Experts team
-# using the Tech Brief template
+# This function creates a new Webinar Wrap-Up Paper project in the
+# ATM Contributing Experts team using the Tech Brief template
 
 
-def create_tech_brief(client, number, total):
+def create_wrapup(client, number, total):
     data1 = """
     {"data": {
-            "name": "[tmp] ($num/$tot) Tech Brief",
+            "name": "[tmp] ($num/$tot) Webinar Wrap-Up Paper",
             "team": "1144457099343897",
             "include": ["members",
                         "task_notes",
