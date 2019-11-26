@@ -4,11 +4,12 @@ import config
 # This function builds a Tech Brief tracker task
 
 
-def build_tb_task(project, client, number, link, pid):
+def build_tb_task(project, client, number, link, pid, tid):
     data1 = """
     {
       "data": {
         "name": "[tmp] Tech Brief #theNum",
+        "resource_subtype": "milestone",
         "assignee": null,
         "completed": false,
         "followers": [
@@ -19,7 +20,8 @@ def build_tb_task(project, client, number, link, pid):
         "notes": "theLink",
         "parent": null,
         "projects": [
-          "theProject"
+          "theProject",
+          "taskID"
         ],
         "custom_fields":
             {
@@ -35,7 +37,8 @@ def build_tb_task(project, client, number, link, pid):
     data2 = data1.replace('theProject', project)
     data3 = data2.replace('thePID', pid)
     data4 = data3.replace('theNum', number)
-    theData = data4.replace('theLink', link)
+    data5 = data4.replace('taskID', tid)
+    theData = data5.replace('theLink', link)
     try:
         response = requests.post(
             url="https://app.asana.com/api/1.0/tasks/",
@@ -56,11 +59,12 @@ def build_tb_task(project, client, number, link, pid):
 # This function builds a Gorilla Guide video tracker task
 
 
-def build_gg_video_task(project, client, number, link, pid):
+def build_gg_video_task(project, client, number, link, pid, tid):
     data1 = """
     {
       "data": {
         "name": "[tmp] Gorilla Guide Video #theNum",
+        "resource_subtype": "milestone",
         "assignee": null,
         "completed": false,
         "followers": [
@@ -71,7 +75,8 @@ def build_gg_video_task(project, client, number, link, pid):
         "notes": "theLink",
         "parent": null,
         "projects": [
-          "theProject"
+          "theProject",
+          "taskID"
         ],
         "custom_fields":
             {
@@ -85,7 +90,8 @@ def build_gg_video_task(project, client, number, link, pid):
     data2 = data1.replace('theProject', project)
     data3 = data2.replace('thePID', pid)
     data4 = data3.replace('theNum', number)
-    theData = data4.replace('theLink', link)
+    data5 = data4.replace('taskID', tid)
+    theData = data5.replace('theLink', link)
     try:
         response = requests.post(
             url="https://app.asana.com/api/1.0/tasks/",
@@ -111,6 +117,7 @@ def build_gge_task(project, client, number, pid):
     {
       "data": {
         "name": "[tmp] Gorilla Guide Express Rollup #theNum",
+        "resource_subtype": "milestone",
         "assignee": null,
         "completed": false,
         "followers": [
@@ -160,6 +167,7 @@ def build_gg_task(project, client, pid):
     {
       "data": {
         "name": "[tmp] Gorilla Guide Rollup",
+        "resource_subtype": "milestone",
         "assignee": null,
         "completed": false,
         "followers": [
@@ -203,11 +211,12 @@ def build_gg_task(project, client, pid):
 # This function builds a blog article tracker task
 
 
-def build_article_task(project, client, number, link, pid):
+def build_article_task(project, client, number, link, pid, tid):
     data1 = """
     {
       "data": {
         "name": "[tmp] Blog Article #theNum",
+        "resource_subtype": "milestone",
         "assignee": null,
         "completed": false,
         "followers": [
@@ -218,7 +227,8 @@ def build_article_task(project, client, number, link, pid):
         "notes": "theLink",
         "parent": null,
         "projects": [
-          "theProject"
+          "theProject",
+          "taskID"
         ],
         "custom_fields":
             {
@@ -234,7 +244,8 @@ def build_article_task(project, client, number, link, pid):
     data2 = data1.replace('theProject', project)
     data3 = data2.replace('thePID', pid)
     data4 = data3.replace('theNum', number)
-    theData = data4.replace('theLink', link)
+    data5 = data4.replace('taskID', tid)
+    theData = data5.replace('theLink', link)
     try:
         response = requests.post(
             url="https://app.asana.com/api/1.0/tasks/",
@@ -256,11 +267,12 @@ def build_article_task(project, client, number, link, pid):
 # This function builds a Webinar Wrap-Up Paper tracker task
 
 
-def build_wrapup_task(project, client, number, link, pid):
+def build_wrapup_task(project, client, number, link, pid, tid):
     data1 = """
     {
       "data": {
         "name": "[tmp] Webinar Wrap-Up Paper #theNum",
+        "resource_subtype": "milestone",
         "assignee": null,
         "completed": false,
         "followers": [
@@ -271,7 +283,8 @@ def build_wrapup_task(project, client, number, link, pid):
         "notes": "theLink",
         "parent": null,
         "projects": [
-          "theProject"
+          "theProject",
+          "taskID"
         ],
         "custom_fields":
             {
@@ -287,7 +300,8 @@ def build_wrapup_task(project, client, number, link, pid):
     data2 = data1.replace('theProject', project)
     data3 = data2.replace('thePID', pid)
     data4 = data3.replace('theNum', number)
-    theData = data4.replace('theLink', link)
+    data5 = data4.replace('taskID', tid)
+    theData = data5.replace('theLink', link)
     try:
         response = requests.post(
             url="https://app.asana.com/api/1.0/tasks/",

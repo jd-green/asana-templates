@@ -13,7 +13,7 @@ for num in range(8):
     print("Asana GID = "+id)
     url = "https://app.asana.com/0/"+id
     build_task.build_tb_task(
-        gid, client_name, str(num+1), url, proj_id)
+        gid, client_name, str(num+1), url, proj_id, id)
     print("Tech Brief Tracking Task Created!")
 
 # Create 8 Video Projects
@@ -23,7 +23,7 @@ for num in range(8):
     print("Asana GID = "+id)
     url = "https://app.asana.com/0/"+id
     build_task.build_gg_video_task(
-        gid, client_name, str(num+1), url, proj_id)
+        gid, client_name, str(num+1), url, proj_id, id)
     print("Video Tracking Task Created!")
 
 # Create 2 Gorilla Guide Express tracker tasks

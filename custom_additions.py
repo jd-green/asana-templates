@@ -14,26 +14,26 @@ gid = input("Asana Project GID: ")
 #     print("Asana GID = "+id)
 #     url = "https://app.asana.com/0/"+id
 #     build_task.build_article_task(
-#         gid, client_name, str(num+1), url, proj_id)
+#         gid, client_name, str(num+1), url, proj_id, id)
 #     print("Article Tracking Task Created!")
 
 
 # # Create 1 Tech Brief Projects
-# for num in range(1):
-#     id = tech_brief.create_tech_brief(client_name, str(num+1), "1")
-#     print("Tech Brief Created!")
-#     print("Asana GID = "+id)
-#     url = "https://app.asana.com/0/"+id
-#     build_task.build_tb_task(
-#         gid, client_name, str(num+1), url, proj_id)
-#     print("Tech Brief Tracking Task Created!")
-
-# Create 1 Webinar Wrap-Up Paper Projects
 for num in range(1):
-    id = webinar_wrapup.create_wrapup(client_name, str(num+1), "1")
-    print("Webinar Wrap-Up Paper Created!")
+    id = tech_brief.create_tech_brief(client_name, str(num+1), "1")
+    print("Tech Brief Created!")
     print("Asana GID = "+id)
     url = "https://app.asana.com/0/"+id
-    build_task.build_wrapup_task(
-        gid, client_name, str(num+1), url, proj_id)
-    print("Webinar Wrap-Up Paper Tracking Task Created!")
+    build_task.build_tb_task(
+        gid, client_name, str(num+1), url, proj_id, id)
+    print("Tech Brief Tracking Task Created!")
+
+# Create 1 Webinar Wrap-Up Paper Projects
+# for num in range(1):
+#     id = webinar_wrapup.create_wrapup(client_name, str(num+1), "1")
+#     print("Webinar Wrap-Up Paper Created!")
+#     print("Asana GID = "+id)
+#     url = "https://app.asana.com/0/"+id
+#     build_task.build_wrapup_task(
+#         gid, client_name, str(num+1), url, proj_id, id)
+#     print("Webinar Wrap-Up Paper Tracking Task Created!")
