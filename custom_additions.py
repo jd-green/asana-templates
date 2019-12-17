@@ -8,16 +8,6 @@ client_name = input("Client Name: ")
 proj_id = input("Project ID: ")
 gid = input("Asana Project GID: ")
 
-# Create 5 Blog Articles
-for num in range(5):
-    id = blog_article.create_article(client_name, str(num+1), "5")
-    print("Blog Article Created!")
-    print("Asana GID = "+id)
-    url = "https://app.asana.com/0/"+id
-    build_task.build_article_task(
-        gid, client_name, str(num+1), url, proj_id, id)
-    print("Article Tracking Task Created!")
-
 # # Create 3 Whitepaper Projects
 for num in range(3):
     id = whitepaper.create_whitepaper(client_name, str(num+1), "3")
@@ -27,6 +17,16 @@ for num in range(3):
     build_task.build_wp_task(
         gid, client_name, str(num+1), url, proj_id, id)
     print("Whitepaper Tracking Task Created!")
+
+# Create 5 Blog Articles
+for num in range(5):
+    id = blog_article.create_article(client_name, str(num+1), "5")
+    print("Blog Article Created!")
+    print("Asana GID = "+id)
+    url = "https://app.asana.com/0/"+id
+    build_task.build_article_task(
+        gid, client_name, str(num+1), url, proj_id, id)
+    print("Article Tracking Task Created!")
 
 # # Create 1 Tech Brief Projects
 # for num in range(1):
