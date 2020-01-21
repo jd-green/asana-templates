@@ -52,7 +52,7 @@ gid = input("Asana Project GID: ")
 # Create 3 Gorilla Guide Express Projects
 for num in range(3):
     id = gorilla_guide_express.create_gge(client_name, str(num+1), "3")
-    print("Webinar Wrap-Up Paper Created!")
+    print("Gorilla Guide Express Created!")
     print("Asana GID = "+id)
     url = "https://app.asana.com/0/"+id
     build_task.build_full_gge_task(
