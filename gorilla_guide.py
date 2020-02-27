@@ -5,11 +5,10 @@ import config
 # This function creates a new project in the ATM Contributing Experts team
 # using the Gorilla Guide Express template
 
-
-def create_gge(client, number, total):
+def create_gg(client):
     data1 = """
     {"data": {
-            "name": "[tmp] ($num/$tot) Gorilla Guide Express",
+            "name": "[tmp] Gorilla Guide",
             "team": "1144457099343897",
             "include": ["members",
                         "task_notes",
@@ -24,17 +23,15 @@ def create_gge(client, number, total):
                         ]
                  }
           }"""
-    data2 = data1.replace('$num', number)
-    theData = data2.replace('$tot', total)
     try:
         response = requests.post(
-            url="https://app.asana.com/api/1.0/projects/1134507636001248/duplicate",
+            url="https://app.asana.com/api/1.0/projects/1125752710363254/duplicate",
             headers={
                 "Authorization": config.api_key,
                 "Content-Type": "text/plain; charset=utf-8",
                 "Cookie": "TooBusyRedirectCount=0",
             },
-            data=theData.replace('tmp', client)
+            data=data1.replace('tmp', client)
             )
         # print('Response HTTP Status Code: {status_code}'.format(
         #     status_code=response.status_code))

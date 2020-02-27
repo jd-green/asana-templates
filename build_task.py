@@ -427,7 +427,7 @@ def build_full_gge_task(project, client, number, link, pid, tid):
     except requests.exceptions.RequestException:
         print('HTTP Request failed')
 
-def build_full_gg_task(project, client, number, link, pid, tid):
+def build_full_gg_task(project, client, link, pid, tid):
     data1 = """
     {
       "data": {
@@ -459,9 +459,8 @@ def build_full_gg_task(project, client, number, link, pid, tid):
     }"""
     data2 = data1.replace('theProject', project)
     data3 = data2.replace('thePID', pid)
-    data4 = data3.replace('theNum', number)
-    data5 = data4.replace('taskID', tid)
-    theData = data5.replace('theLink', link)
+    data4 = data3.replace('taskID', tid)
+    theData = data4.replace('theLink', link)
     try:
         response = requests.post(
             url="https://app.asana.com/api/1.0/tasks/",
